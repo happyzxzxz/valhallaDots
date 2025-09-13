@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "appearance": "dark",
+  "icon": "./valhalla.jpg",
+  "name": "Va-11 Hall-a",
+  "description": "Cyberpunk Bartending",
+  "palette": {
+    "background": "#1F1A2E",
+    "foreground": "#FFFFFF",
+    "blue": "#96DDF1",
+    "green": "#39C24D",
+    "magenta": "#7B3A7F",
+    "orange": "#A75D23",
+    "purple": "#2B0C50",
+    "red": "#FB135F",
+    "yellow": "#D2746C",
+    "cyan": "#7FF3CB"
+  }
+}

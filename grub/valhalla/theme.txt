@@ -1,0 +1,36 @@
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-box: "terminal_box_*.png"
+terminal-left: "10%"
+terminal-top: "10%"
+terminal-width: "80%"
+terminal-height: "80%"
+
+# menu
++ boot_menu {
+    left = 90
+    top = 300
+    width = 827
+    height = 300
+    item_font = "CyberpunkWaifus 42.pf2"
+    item_color = "#808080"
+    selected_item_color = "#FFFFFF"
+    icon_width = 60
+    icon_height = 60
+    item_icon_space = 32
+    item_height = 40
+    item_padding = 0
+    item_spacing = 30
+}
+
+# countdown
++ label {
+    left = 65
+    top = 970
+    align = "left"
+    id = "__timeout__"
+    text = "Serving in %d seconds..."
+    color = "#ffffffff"
+    font = "CyberpunkWaifus 42.pf2"
+}

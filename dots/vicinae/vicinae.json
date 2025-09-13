@@ -1,0 +1,19 @@
+{
+    "faviconService": "twenty",
+    "font": {
+        "normal": "CyberpunkWaifus",
+        "size": 12
+    },
+    "popToRootOnClose": false,
+    "rootSearch": {
+        "searchFiles": false
+    },
+    "theme": {
+        "name": "valhalla.json"
+    },
+    "window": {
+        "csd": false,
+        "opacity": 0.95,
+        "rounding": 10
+    }
+}

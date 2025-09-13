@@ -1,6 +1,6 @@
 
 ## VA-11 HALL-A inspired dots with sddm and grub themes
-SDDM theme was made with [Silent](https://github.com/uiriansan/SilentSDDM) cus I'm lazy and it's not very usable if you have more than one user and change them constantly
+SDDM theme was made with [Silent](https://github.com/uiriansan/SilentSDDM) cus I'm lazy and it's not very usable if you have more than one user and change them constantly. <p>
 Stuff (mostly css) may break if not on 1920x1080, sorry for that, should be fixable for everything if you really want to use it
 ### Screenshots
 | Workspaces  | Grub/SDDM |

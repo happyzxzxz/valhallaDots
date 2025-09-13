@@ -3,10 +3,10 @@
 SDDM theme was made with [Silent](https://github.com/uiriansan/SilentSDDM) cus I'm lazy and it's not very usable if you have more than one user and change them constantly
 Stuff (mostly css) may break if not on 1920x1080, sorry for that, should be fixable for everything if you really want to use it
 ### Screenshots
-workspace1 placeholder
-workspace2 placeholder
-sddm placeholder
-grub placeholder
+| Workspaces  | Grub/SDDM |
+| ------------- | ------------- |
+| ![workspace1](https://github.com/happyzxzxz/valhallaDots/blob/main/screenshots/workspace1.png?raw=true)  | ![grub](https://github.com/happyzxzxz/valhallaDots/blob/main/screenshots/grub.png?raw=true)  |
+| ![workspace2](https://github.com/happyzxzxz/valhallaDots/blob/main/screenshots/workspace2.png?raw=true)  | ![sddm](https://github.com/happyzxzxz/valhallaDots/blob/main/screenshots/sddm_screen_1.png?raw=true)  |
 ### What's used in here
 |Part|Name|
 |--|--|

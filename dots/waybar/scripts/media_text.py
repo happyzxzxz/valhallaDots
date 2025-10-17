@@ -66,6 +66,7 @@ else:
     status = get_status(chosen)
     meta = get_metadata(chosen)
     data["text"] = meta if meta else "Please, select a song"
+    data["text"] = data["text"].replace("&", "&amp;")
     data["class"] = status
 
 # Обновляем арт/waybar

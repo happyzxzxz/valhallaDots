@@ -38,3 +38,10 @@ I think that's mostly it. Keep in mind that all of this stuff you should install
     chmod +x install.sh
     ./install.sh
 Don't forget to change `~/.config/hypr/hyprland.conf` for your configuration
+
+### More about grub theme
+It should work fine, but if your resolution is something else than **1920x1080** then you need to change font size:
+
+    chmod +x changeFont.sh
+    sudo ./changeFont.sh <size>
+Where `<size>` is your font size. Default for FullHD is **42**

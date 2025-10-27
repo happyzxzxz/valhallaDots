@@ -1,0 +1,302 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family:
+        CyberpunkWaifus,
+        EpilepsySans,
+        Symbols Nerd Font;
+    /* font-weight: bold; */
+    font-size: 14px;
+    min-height: 0;
+}
+
+@define-color brandtini #E03C28;
+@define-color pianowoman #7FF3CB;
+@define-color badtouch #39C24D;
+@define-color menuviolet #1F1A2E;
+@define-color borderblack #0F0C15;
+@define-color borderbottom #1B1922;
+@define-color borderright #2C2837;
+@define-color valhallared #C72459;
+@define-color neonblue #3D88D6;
+@define-color neonred #AB023E;
+@define-color neonlightblue #96DDF1;
+
+window#waybar {
+    background-color: @menuviolet;
+}
+
+#workspaces {
+    padding: 1px 2px;
+    margin: 2px 2px;
+    border-radius: 0px;
+}
+
+#workspaces button {
+    font-size: 0px; /* hide the {id} text */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0px;
+    min-width: 15px;
+    min-height: 20px;
+    padding: 2;
+    margin: 1px;
+    background-color: transparent;
+    transition: none;
+    animation: none;
+}
+
+#workspaces button:nth-child(1) {
+    background-image: url("/home/karasevuy/icons/Adelhyde_BW.png");
+}
+#workspaces button:nth-child(2) {
+    background-image: url("/home/karasevuy/icons/Bronson_Extract_BW.png");
+}
+#workspaces button:nth-child(3) {
+    background-image: url("/home/karasevuy/icons/Pwrd_Delta_BW.png");
+}
+#workspaces button:nth-child(4) {
+    background-image: url("/home/karasevuy/icons/Flanergide_BW.png");
+}
+#workspaces button:nth-child(5) {
+    background-image: url("/home/karasevuy/icons/Karmotrine_BW.png");
+}
+
+#workspaces button {
+    background-image: url("/home/karasevuy/icons/Karmotrine_BW.png");
+}
+
+#workspaces button.active,
+#workspaces button:hover {
+    background-image: url("/home/karasevuy/icons/Karmotrine.png");
+}
+
+/* Active workspace → color */
+#workspaces button.active:nth-child(1),
+#workspaces button:hover:nth-child(1) {
+    background-image: url("/home/karasevuy/icons/Adelhyde.png");
+}
+
+#workspaces button.active:nth-child(2),
+#workspaces button:hover:nth-child(2) {
+    background-image: url("/home/karasevuy/icons/Bronson_Extract.png");
+}
+
+#workspaces button.active:nth-child(3),
+#workspaces button:hover:nth-child(3) {
+    background-image: url("/home/karasevuy/icons/Pwrd_Delta.png");
+}
+
+#workspaces button.active:nth-child(4),
+#workspaces button:hover:nth-child(4) {
+    background-image: url("/home/karasevuy/icons/Flanergide.png");
+}
+
+#workspaces button.active:nth-child(5),
+#workspaces button:hover:nth-child(5) {
+    background-image: url("/home/karasevuy/icons/Karmotrine.png");
+}
+
+#workspaces button.urgent {
+    background-color: @brandtini;
+    padding: 0px 1px;
+}
+
+#workspaces {
+    font-size: 16px;
+    margin: 2px 0px 2px 5px;
+    background-color: black;
+
+    border-left: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+    border-top: 2px groove @borderblack;
+    border-right: 2px groove @borderblack;
+}
+
+#custom-weather {
+    font-size: 15px;
+    margin: 2px 0px 2px 3px;
+    background-color: black;
+
+    border-left: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+    border-top: 2px groove @borderblack;
+    border-right: 2px groove @borderright;
+
+    /* border: 2px groove #2A2539;
+	box-shadow: 0 0 0 1px #2C273B; */
+}
+
+#custom-cyberpunk-text {
+    margin: 3px 0px 3px 85px;
+    color: @valhallared;
+    font-weight: bold;
+    padding-top: 3px;
+    font-size: 15px;
+}
+
+#custom-va-11 {
+    color: @valhallared;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 3px;
+    margin: 3px 145px 3px 0px;
+}
+
+#custom-cyberpunk-text,
+#custom-va-11 {
+    background: black;
+    border-left: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+    border-top: 2px groove @borderblack;
+    border-right: 2px groove @borderright;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#custom-dummy {
+    margin: 0px 0px 0px 50px;
+}
+
+#pulseaudio.microphone {
+    margin: 2px 3px 2px 0px;
+    border-radius: 0px 6px 6px 0px;
+    padding: 0px 7px 0px 7px;
+}
+
+#custom-media-text.stopped {
+    border: 2px double @neonblue; /* blue if no media */
+    color: @neonblue;
+}
+
+#custom-media-text.playing {
+    border: 2px double @neonred; /* red if media playing */
+}
+
+#custom-media-text.playing,
+#custom-media-text {
+    border: 2px double @neonred;
+}
+
+#custom-media-text.paused {
+    border: 2px double @neonblue;
+}
+
+#custom-media-text {
+    min-width: 150px;
+    background-color: black;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 3px 0px;
+}
+
+#custom-media-text:hover {
+    color: @neolightblue;
+}
+
+#image.media-art {
+    min-width: 30px;
+    min-height: 20px;
+    padding-left: 5px;
+}
+
+#image.audio {
+    padding-left: 10px;
+}
+
+#pulseaudio.volume {
+    margin: 2px 0px 2px 7px;
+    border-radius: 12px 0px 0px 12px;
+    padding: 0px 7px 0px 2px;
+}
+
+#pulseaudio:hover {
+    color: @neolightblue;
+}
+
+#tray menu menuitem {
+    font-size: 15px;
+    background-color: #1f1a2e;
+}
+#tray menu menuitem:hover {
+    color: @neolightblue;
+}
+#tray menu {
+    background-color: #1f1a2e;
+    border-left: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+    border-top: 2px groove @borderblack;
+    border-right: 2px groove @borderright;
+}
+
+#tray {
+    background-color: black;
+
+    border-left: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+    border-top: 2px groove @borderblack;
+    border-right: 2px groove @borderblack;
+
+    font-size: 14px;
+
+    margin: 3px 5px 3px 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @brandtini;
+}
+
+/* tooltip * {
+	font-size: 14px;
+	text-shadow: none;
+} */
+
+#language {
+    background-color: black;
+    border-left: 2px groove @borderblack;
+    border-top: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+
+    margin: 3px 0px 3px 0px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+#language:hover {
+    color: @pianowoman;
+}
+
+#clock {
+    background-color: black;
+    border-top: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+
+    margin: 3px 0px 3px 0px;
+}
+
+#clock:hover {
+    color: @badtouch;
+}
+
+#custom-power {
+    background-color: black;
+    border-top: 2px groove @borderblack;
+    border-bottom: 2px groove @borderbottom;
+    border-right: 2px groove @borderright;
+
+    margin: 3px 4px 3px 0px;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+#custom-power:hover {
+    color: @brandtini;
+}

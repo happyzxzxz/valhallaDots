@@ -1,0 +1,152 @@
+// -*- mode: jsonc -*-
+{
+  "height": 0,
+  "width": 1920,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/weather",
+    "custom/cyberpunk-text",
+  ],
+  "modules-center": [
+    "custom/dummy",
+    "image#microphone",
+    "pulseaudio#microphone",
+    "custom/media-text",
+    "image#media-art",
+    "image#audio",
+    "pulseaudio#volume",
+  ],
+  "modules-right": [
+    "custom/va-11",
+    "tray",
+    "hyprland/language",
+    "clock",
+    "custom/power",
+  ],
+
+  "hyprland/workspaces": {
+    "format": " ",
+    "on-click": "activate",
+    "persistent-workspaces": { "*": 5 },
+    "all-outputs": false,
+    "active-only": false,
+    "tooltip": false,
+  },
+
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": false,
+    "interval": 600,
+    "exec": "~/.config/waybar/scripts/weather.py",
+    "return-type": "json",
+  },
+
+  "custom/cyberpunk-text": {
+    "format": "Cyberpunk Bartender Action",
+    "tooltip": false,
+  },
+
+  "custom/va-11": {
+    "format": "VA-11 HALL-A",
+    "tooltip": false,
+  },
+
+  "custom/dummy": {
+    "format": " ",
+  },
+
+  "custom/media-text": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 19,
+    "exec": "~/.config/waybar/scripts/media_text.py",
+    "interval": 2,
+    "on-click": "~/.config/waybar/scripts/media_control.sh play-pause",
+    "on-scroll-up": "~/.config/waybar/scripts/media_control.sh next",
+    "on-scroll-down": "~/.config/waybar/scripts/media_control.sh previous",
+    "on-click-right": "~/.config/waybar/scripts/media_switch.sh",
+    "tooltip": false,
+  },
+
+  "image#media-art": {
+    "exec": "~/.config/waybar/scripts/media_art.py",
+    "signal": 10, // executed on media-text end
+    "size": 35,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/media_control.sh play-pause",
+    "on-scroll-up": "~/.config/waybar/scripts/media_control.sh next",
+    "on-scroll-down": "~/.config/waybar/scripts/media_control.sh previous",
+    "expand": true,
+  },
+
+  "image#microphone": {
+    "path": "/home/karasevuy/icons/microphone.png",
+    "size": 20,
+    "on-click": "flatpak run com.saivert.pwvucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 10%+ -l 1.0",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 10%- -l 1.0",
+  },
+
+  "image#audio": {
+    "path": "/home/karasevuy/icons/audio.png",
+    "size": 18,
+    "on-click": "flatpak run com.saivert.pwvucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+  },
+
+  "pulseaudio#volume": {
+    "scroll-step": 5,
+    "format": "{volume}%",
+    "format-muted": "M",
+    "on-click": "flatpak run com.saivert.pwvucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "tooltip": false,
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "{volume}%",
+    "format-source-muted": "M",
+    "on-click": "flatpak run com.saivert.pwvucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 10%+ -l 1.0",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 10%- -l 1.0",
+    "tooltip": false,
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "on-scroll-up": "hyprctl switchxkblayout all next",
+    "on-scroll-down": "hyprctl switchxkblayout all prev",
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10,
+    "tooltip": false,
+  },
+
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%Y-%m-%d}",
+    "tooltip": true,
+  },
+
+  "custom/power": {
+    "format": "󰤆",
+    "tooltip": false,
+    "on-click": "wlogout",
+  },
+
+  "reload_style_on_change": true,
+}

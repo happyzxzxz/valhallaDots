@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
   "height": 0,
-  "width": 1920,
+  "width": 1366,
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
@@ -76,7 +76,7 @@
   "image#media-art": {
     "exec": "~/.config/waybar/scripts/media_art.py",
     "signal": 10, // executed on media-text end
-    "size": 35,
+    "size": 30,
     "tooltip": false,
     "on-click": "~/.config/waybar/scripts/media_control.sh play-pause",
     "on-scroll-up": "~/.config/waybar/scripts/media_control.sh next",
@@ -85,8 +85,8 @@
   },
 
   "image#microphone": {
-    "path": "~/icons/microphone.png",
-    "size": 20,
+    "path": "/home/karasevuy/icons/microphone.png",
+    "size": 15,
     "on-click": "flatpak run com.saivert.pwvucontrol",
     "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 10%+ -l 1.0",
@@ -94,8 +94,8 @@
   },
 
   "image#audio": {
-    "path": "~/icons/audio.png",
-    "size": 18,
+    "path": "/home/karasevuy/icons/audio.png",
+    "size": 15,
     "on-click": "flatpak run com.saivert.pwvucontrol",
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
@@ -130,7 +130,7 @@
   },
 
   "tray": {
-    "icon-size": 15,
+    "icon-size": 12,
     "spacing": 10,
     "tooltip": false,
   },
